@@ -1,8 +1,10 @@
 import puppeteer from 'puppeteer';
+import cors from 'cors';
 import express, { Express, Request, Response } from 'express';
 import * as fs from 'fs';
 
 const app = express();
+app.use(cors());
 
 const generatePDF = async (req: Request, res: Response) => {
 
